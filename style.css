@@ -1,0 +1,272 @@
+* {
+  margin: 0px 0px;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("./img/slider/pexels-veeterzy-303383.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  background-color: white;
+  border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 22px;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  display: inline-block;
+  position: relative;
+  margin-top: 7px;
+}
+
+
+.navbar ul li a {
+  margin: 0 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: .7s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+
+
+#menu-btn {
+  display: none;
+  color: black;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-right: 10px;
+}
+
+
+.navlist ul li {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 30px;
+}
+
+.content p {
+  margin: 5px auto;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.content button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.content button:hover {
+  color: black;
+
+}
+
+.content button span {
+  background-color: white;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -5;
+  transition: .7s;
+}
+
+.content button:hover span {
+  width: 100%;
+
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-icons li a {
+  display: inline-block;
+  margin: 0 7px;
+  padding: 10px;
+  transition: .6s;
+}
+
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: black;
+
+}
+
+@media (max-width:760px) {
+  
+  .content button {
+    width: 200px;
+    margin-top: 30px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .social-icons li a {
+    margin: 0 2px;
+    padding: 2;
+  }
+
+  .navbar {
+    height: 58px;
+  }
+
+  .navbar ul li a {
+    display: none;
+  }
+
+  .navlist {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .navlist ul li {
+    display: block;
+    font-size: 25px;
+    margin: 18px;
+    text-align: center;
+  }
+
+  .navlist ul li a {
+    color: black;
+  }
+
+  .navlist.active {
+    display: block;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    margin-top: 7px;
+  }
+
+  .navbar .logo {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width:460px) {
+  .content button {
+    width: 140px;
+    margin-top: 30px;
+  }
+
+  .content h1 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 11px;
+  }
+
+  .social-icons li a {
+    margin: 0 1px;
+    padding: 9px;
+  }
+  #menu-btn {
+    margin-top: 8px;
+  }
+  .navbar .logo {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width:320px) {
+  .content button {
+    width: 120px;
+    margin-top: 20px;
+  }
+
+  .content h1 {
+    margin-top: -20px;
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 10px;
+  }
+
+  .social-icons li a {
+    margin: 0 1px;
+    padding: 2px;
+  }
+}
